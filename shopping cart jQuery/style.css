@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+.productsCart {
+	width: 60vw;
+	height: 90vh;
+	border: 1px solid #919191;
+	margin: 0 5px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.orderList {
+	width: 30vw;
+	height: 90vh;
+	border: 3px dashed #c9c9c9;
+	margin: 0 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	overflow: auto;
+}
+
+.dropSite {
+	color: #c9c9c9;
+	font-size: 23px;
+	font-weight: 600;
+}
+
+.productList {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	justify-content: center;
+	overflow: auto;
+	flex-wrap: wrap;
+}
+
+.checkList {
+	width: 100%;
+	height: 30%;
+	border: 1px solid #292929;
+	padding: 10px;
+}
+
+.productOuter {
+	width: 150px;
+	height: 225px;
+	margin: 3px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+}
+
+img {
+	width: 100%;
+}
+
+.productList h4 {
+	text-align: center;
+}
+
+.priceOuter {
+	display: flex;
+	justify-content: center;
+}
+
+.btnCheckOut {
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: none;
+	background-color: #cc3131;
+	color: #fff;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.btnClear {
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: none;
+	background-color: #409644;
+	color: #fff;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.totalSum {
+	margin-top: 30px;
+	height: 70px;
+	display: flex;
+	align-items: flex-end;
+}
+
+/* @media (max-width: 1024px) {
+	.wrapper {
+		flex-direction: column;
+	}
+
+	.productsCart {
+		width: 80vw;
+		height: 60vh;
+		margin: 5px 0;
+	}
+
+	.checkList {
+		width: 80vw;
+		height: 30vh;
+		margin: 5px 0;
+	}
+} */
+
+/* ------------------------- Scroll Bar ----------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

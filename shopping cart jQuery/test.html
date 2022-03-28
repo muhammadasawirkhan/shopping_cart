@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="productCatalog">
+        <div class="product" >
+            <h2 class="des">Product 1 </h2>
+            <p class="description"> price: </p>
+            <p class="price" id="pro1">400</p>
+        </div>
+        <div class="product">
+            <h2 class="des">Product 2 </h2>
+            <p class="description"> price: </p>
+            <p class="price" id="pro2">200</p>
+        </div>
+        <div class="product">
+            <h2 class="des">Product 3 </h2>
+            <p class="description"> price: </p>
+            <p class="price" id="pro3">900</p>
+        </div>
+        <div class="product">
+            <h2 class="des">Product 4 </h2>
+            <p class="description"> price: </p>
+            <p class="price" id="pro4">152.30</p>
+        </div>
+       </section>
+       <section id="shoppingCart">
+        <h2 align="center">shopping cart</h2>
+        total:
+        <span id="cartSum">0</span>
+       </section>
+    
+    <script>
+        $(function(){
+    
+    
+            $('.product').draggable({ 
+                scroll: false, 
+                containment: 'document' , 
+                revert: true,
+                start: function()
+                {
+                    contents = $(this).text();
+                }
+             });    
+    
+    
+               var price = parseInt($(".selected").text()); 
+              var cartSum = $("#cartSum").text();
+    
+    
+    
+              $('#shoppingCart').droppable({ hoverClass: 'border', accept: '.product', drop: function()
+              {
+    
+                 $('#shoppingCart').append("<div  class='selected'>" + contents + "</div>" + "<button id='butt' onclick='one(this)'>delete item</button>" ) ;
+                 cartSum = price;
+                 function updateCartTotal(){
+                $("#cartSum").text(cartSum); 
+    
+            }
+              }}); 
+    
+              window.one = function(obj){
+    
+            var item = $(obj).prev().andSelf().remove(); 
+    
+    
+        }
+    
+        });
+    </script>
+</body>
+</html>
